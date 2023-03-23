@@ -1,6 +1,7 @@
-package com.customer.controller;
+package com.nttdata.customer.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,8 +10,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.customer.dto.CustomerDTO;
-import com.customer.service.ICustomerService;
+
+import com.nttdata.customer.dto.CustomerDTO;
+import com.nttdata.customer.service.CustomerService;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -19,7 +22,7 @@ import reactor.core.publisher.Mono;
 public class CustomerController {
 
 	@Autowired
-	ICustomerService _customerService;
+	CustomerService _customerService;
 		
 	@GetMapping
     public Flux<CustomerDTO> findAll(){
@@ -31,7 +34,7 @@ public class CustomerController {
         return _customerService.findById(id);
     }
 
-	@PostMapping
+	@PostMapping(value="registrar",consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Mono<CustomerDTO> save(@RequestBody Mono<CustomerDTO> customerDtoMono){
         return _customerService.save(customerDtoMono);
     }

@@ -1,10 +1,11 @@
-package com.customer.service;
+package com.nttdata.customer.service;
 
-import com.customer.dto.CustomerDTO;
+import com.nttdata.customer.dto.CustomerDTO;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-public interface ICustomerService {
+public interface CustomerService {
 
 	Flux<CustomerDTO> findAll();
     Mono<CustomerDTO> findById(String id);
