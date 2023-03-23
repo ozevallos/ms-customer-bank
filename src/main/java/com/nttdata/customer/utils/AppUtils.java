@@ -1,7 +1,8 @@
-package com.customer.utils;
+package com.nttdata.customer.utils;
 
-import com.customer.dto.CustomerDTO;
-import com.customer.model.Customer;
+import com.nttdata.customer.dto.CustomerDTO;
+import com.nttdata.customer.model.Customer;
+
 import org.springframework.beans.BeanUtils;
 
 public class AppUtils {

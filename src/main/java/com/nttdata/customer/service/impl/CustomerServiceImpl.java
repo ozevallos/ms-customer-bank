@@ -1,21 +1,20 @@
-package com.customer.service.impl;
+package com.nttdata.customer.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.customer.dto.CustomerDTO;
-import com.customer.model.Customer;
-import com.customer.repository.CustomerRepository;
-import com.customer.service.ICustomerService;
-import com.customer.utils.AppUtils;
+import com.nttdata.customer.dto.CustomerDTO;
+import com.nttdata.customer.repository.CustomerRepository;
+import com.nttdata.customer.service.CustomerService;
+import com.nttdata.customer.utils.AppUtils;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
-public class CustomerServiceImpl implements ICustomerService{
+public class CustomerServiceImpl implements CustomerService{
 
 	@Autowired
 	CustomerRepository _customerRepository;

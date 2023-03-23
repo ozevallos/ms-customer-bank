@@ -1,4 +1,6 @@
-package com.customer.dto;
+package com.nttdata.customer.dto;
+
+import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,8 +18,8 @@ public class CustomerDTO {
 	private String docId;
 	private String documentType;
 	private String customerType;
-	private String dateCreate;
-	private String dateModify;
-	private String dateCustomer;
+	private Date dateCreate;
+	private Date dateModify;
+	private Date dateCustomer;
 	
 }

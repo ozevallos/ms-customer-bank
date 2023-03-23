@@ -1,5 +1,5 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://eliezerzevl:holamundo@bootcamp41.bwindeq.mongodb.net/bank?retryWrites=true&w=majority
+      uri: mongodb+srv://eliezerzevl:holamundo123@bootcamp41.bwindeq.mongodb.net/bank?retryWrites=true&w=majority
       database: bank
